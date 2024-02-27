@@ -1,6 +1,4 @@
 import javax.imageio.ImageIO;
-import java.awt.*;
-import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.Random;
 
@@ -22,11 +20,11 @@ public class slime extends mob {
 
     public void getImage() { //same as player one
         try {
-            up1 = ImageIO.read(getClass().getResourceAsStream("/monster/slime_up_1"));
+            up1 = ImageIO.read(getClass().getResourceAsStream("/monster/greenslime_down_1.png"));
             // up2= ImageIO.read(getClass().getResourceAsStream(""));
-            down1 = ImageIO.read(getClass().getResourceAsStream("/monster/slime_down_1"));
+            down1 = ImageIO.read(getClass().getResourceAsStream("/monster/greenslime_down_2.png"));
             //  down2= ImageIO.read(getClass().getResourceAsStream(""));
-            left1 = ImageIO.read(getClass().getResourceAsStream("/monster/slime_left_1"));
+           left1 = ImageIO.read(getClass().getResourceAsStream("/monster/slime_left_1"));
             // left2= ImageIO.read(getClass().getResourceAsStream(""));
             right1 = ImageIO.read(getClass().getResourceAsStream("/monster/slime_right_1"));
             //right2= ImageIO.read(getClass().getResourceAsStream(""));
@@ -59,20 +57,7 @@ public class slime extends mob {
         }
         actionLockCounter = 0;
     }
-public void draw(Graphics2D g2, Level1 gp)
-{
-    int screenx=worldx-gp.player.worldx+gp.player.screenx;
-    int screeny=worldy-gp.player.worldy+gp.player.screeny;
-    BufferedImage image=switch(direction)
-            {
-                case "up" -> up1;
-                case "down" -> down1;
-                case "left" -> left1;
-                case "right" -> right1;
-                default -> null;
-            };
-    g2.drawImage(image,screenx,screeny,gp.tileSize,gp.tileSize,null);
-}
+
 
 
 }

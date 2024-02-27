@@ -53,7 +53,7 @@ public class LevelSelectionScreen extends JFrame {
     }
 
     private void handleLevelButton(int level) {
-        if(levelUnlocked[level-1])
+        if(levelUnlocked[level-1]==true)
         {
             JOptionPane.showMessageDialog(null, "Starting Level"+level+ "!");
         if(level==1)
@@ -81,7 +81,7 @@ public class LevelSelectionScreen extends JFrame {
 
     private LevelButton createLevelButton(String text,String imagePath,boolean unlocked)
     {
-        LevelButton button =new LevelButton(text,imagePath,unlocked);
+        LevelButton button=new LevelButton(text,imagePath,unlocked);
         button.setFocusPainted(false);
         return button;
     }
@@ -92,7 +92,7 @@ public class LevelSelectionScreen extends JFrame {
 
         public BackgroundPanel(String backgroundImagePath)
         {
-            this.backgroundImage =new ImageIcon(backgroundImagePath).getImage();
+            this.backgroundImage=new ImageIcon(backgroundImagePath).getImage();
         }
 
         @Override
@@ -110,7 +110,7 @@ public class LevelSelectionScreen extends JFrame {
         public LevelButton(String text,String imagePath,boolean unlocked)
         {
             super(text);
-            this.levelImage =new ImageIcon(imagePath).getImage();
+            this.levelImage=new ImageIcon(imagePath).getImage();
             this.setEnabled(unlocked);
         }
 

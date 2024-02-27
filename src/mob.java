@@ -12,7 +12,7 @@ public Rectangle solidArea = new Rectangle(0,0,48,48);// class to create invisib
  public boolean collisionOn = false;
 public int solidAreaDefaultx;
 public int solidAreaDefaulty;
-public String direction;
+public String direction="down";
 public String name;
 public int actionLockCounter=0;
 //health
@@ -38,6 +38,19 @@ public int actionLockCounter=0;
             }
         }
     }
-
+    public void draw(Graphics2D g2, Level1 gp)
+    {
+        int screenx=worldx-gp.player.worldx+gp.player.screenx;
+        int screeny=worldy-gp.player.worldy+gp.player.screeny;
+        BufferedImage image=switch(direction)
+                {
+                    case "up" -> up1;
+                    case "down" -> down1;
+                    case "left" -> left1;
+                    case "right" -> right1;
+                    default -> null;
+                };
+        g2.drawImage(image,screenx,screeny,gp.tileSize,gp.tileSize,null);
+    }
 
 }

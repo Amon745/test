@@ -26,7 +26,7 @@ public class Level1 extends JPanel implements Runnable{
     public assetPlacer aPlacer=new assetPlacer(this);
     public ui UI=new ui(this);
     public eventManager eManager=new eventManager(this);
-    public mob monster[]=new slime[20]; //max num of monsters that can be displayed
+   // public mob monster[]=new mob[20]; //max num of monsters that can be displayed
 
         public Level1() //contructor method for level 1
         {
@@ -40,7 +40,7 @@ public class Level1 extends JPanel implements Runnable{
         public void setUpAssets()
         {
             aPlacer.setObjects(); //call from assetPlacer class
-          //  aPlacer.setMonster();
+           // aPlacer.setMonster();
         }
         public void startGameThread()
         {
@@ -99,13 +99,13 @@ public class Level1 extends JPanel implements Runnable{
         public void update()
         {
                 player.update();
-               /* for(int i=0; i< monster.length;i++)
+             /*   for(int i=0; i< monster.length;i++)
                 {
                     if(monster[i]!=null)
                     {
                         monster[i].update();
                     }
-                }*/
+               }*/
         }
         //paint component is called everytime to update the graphics of the player
         public void paintComponent(Graphics g)

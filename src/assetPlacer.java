@@ -50,7 +50,7 @@ public class assetPlacer
 
 
     }
-    public void setMonster()
+  /*  public void setMonster()
     {
         gp.monster[0]=new slime(gp);
         gp.monster[0].worldx=gp.tileSize*23;
@@ -59,5 +59,5 @@ public class assetPlacer
         gp.monster[1]=new slime(gp);
         gp.monster[1].worldx=gp.tileSize*23;
         gp.monster[1].worldy=gp.tileSize*37;
-    }
+    }*/
 }
